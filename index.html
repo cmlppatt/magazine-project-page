@@ -17,8 +17,9 @@
     
     <style>
       .wrapper{
-        width: 1200px;
+        width: 100%;
         margin: auto;
+        font-family: "Gelasio", serif;
       }
       
       .nav-bar{
@@ -30,6 +31,7 @@
         list-style-type: none;
         padding: 0px;
         margin: 0px;
+        margin-top: -8px;
         overflow: hidden;
       }
       
@@ -40,7 +42,7 @@
       .nav-bar a{
         color: #f9dc6f;
         font-size: 16px;
-        font-family: "Gelasio", serif;
+        font-family: "Poppins", serif;
         text-decoration: none;
         padding: 15px 50px;
         display: block;
@@ -59,9 +61,33 @@
       
       .project-details{
         width: 100%;
-        font-family: "Gelasio", serif;
+        font-size: 16px;
+        text-align: justify;
         color: #2C2C35;
         background-color: #FAF0E7;
+      }
+      
+      .header{
+        width: 100%;
+        display: inline;
+      }
+      
+      .title{
+        width: 70%;
+        float: left;
+        margin-bottom: 15px;
+      }
+      
+      .details{
+        width: 30%;
+        float: right;
+        text-align: right;
+      }
+      
+      .body-info{
+        width: 100%;
+        line-height: 22px;
+        padding-bottom: 10px;
       }
       
       .quote{
@@ -69,8 +95,14 @@
         font-size: 20px;
         color: #DE98E6;
         text-shadow: .5px .5px 2px #FFF;
-        margin: 30px 15px;
+        margin: 0px 0px 0px 25px;
         padding: 0px;
+      }
+      
+      .citation{
+        margin-top: 2px;
+        padding-left: 155px;
+        color: #77306A;
       }
       
       * {box-sizing: border-box}
@@ -119,7 +151,7 @@
         cursor: pointer;
         height: 15px;
         width: 15px;
-        margin: 0 2px;
+        margin: 0px 2px 15px 2px;
         background-color: #77306A;
         border-radius: 50%;
         display: inline-block;
@@ -142,10 +174,35 @@
       }
       
       body{
-        margin: 0px;
+        margin-left: 0px;
         background-color: #2C2C35;
       }
       
+      h1, h2, h3{
+        font-family: "Poppins", sans-serif;
+      }
+      
+      h1{
+        margin: 25px 0px 5px 25px;
+        font-size: 48px;
+        padding-bottom: 0px;
+      }
+      
+      h2{
+        margin: 30px 25px 0px 0px;
+      }
+      
+      h3{
+        margin: -2px 25px 5px 0px;
+      }
+      
+      p{
+        margin: 0px 25px 30px 25px;
+      }
+      
+      #last-img{
+        margin-right: 25px;
+      }
     </style>
   </head>
   <body>
@@ -229,31 +286,40 @@
       }  
       </script>
       
-      
-      
       <div class="project-details">
-        <h1>
-          Where's The Inspo?
-        </h1>
-        <h2>
-          Magazine Design
-        </h2>
-        <img src="indesign_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
-        <img src="photoshop_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
-        <img src="illustrator_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
-        
-        <p class="quote">
-          "My drawing was not a picture of a hat. It was a picture of a boa constrictor digesting an elephant... The grown-ups were not able to understand it... They always need to have things explained.""
-        </p>
-        
-        <p class="citation">
-          - Antoine de Saint-Exupéry in <i>The Little Prince</i>,
-          page 4, 1943
-        </p>
+        <div class="header">
+          <div class="title">
+            <h1>
+            Where's The Inspo?
+            </h1>
+          </div>
+          <div class="details">
+            <h2>
+            Magazine Design
+            </h2>
+            <h3>
+              December 2024
+            </h3>
+            <img src="indesign_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
+            <img src="photoshop_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
+            <img id="last-img" src="illustrator_logo.png" alt="Adobe InDesign logo"       style="width:45px;height:45px;">
+          </div>
+        </div>
+        <div class="body-info">
+          <p class="quote">
+            " My drawing was not a picture of a hat. It was a picture of a boa <br> constrictor digesting an elephant... The grown-ups were not able <br> to understand it... They always need to have things explained. "
+          </p>
 
-        <p>
-          This magazine project is an exploration of my design philosophy, style and an appreciation of everyday design instances.
-        </p>
+          <p class="citation">
+            - Antoine de Saint-Exupéry in <i>The Little Prince</i>, page 4, 1943
+          </p>
+
+          <p>
+            Design does not have to be perfect or clean or minimalist. This project is a reflection of my design philosophy and inspired by Saint-Exupéry, how to have fun with design.  The graphics are bold and without meaning, embracing the randomness of childlike imagination. Topics discussed include design uses in everyday life, my progression througout my first year at university and my future plans.   
+            
+           
+          </p>
+        </div>
       </div>
     </div>
   </body>
