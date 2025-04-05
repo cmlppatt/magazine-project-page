@@ -15,11 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <style>
-      .wrapper-slides{
-        margin: auto;
-        background-color: #2c2c35;
+      body{
+        background-color: #FAF0E7;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Gelasio", serif;
+        color: #2C2C35;
       }
       
+      p{
+        margin: 0px 25px 30px 25px;
+      }
+      
+      /* Nav bar rules */
       .nav-bar{
         width: 100%;
         background-color: #2c2c35;
@@ -66,11 +75,28 @@
         margin-bottom: -10px;
       }
       
+      /* Page layout */
       .project-details{
         color: #2c2c35;
         padding-bottom: 10px;
         width: 1200px;
         margin: auto;
+      }
+      
+      #last-img{
+        margin-right: 25px;
+      }
+      
+      .divider{
+        height: 20px;
+        background-color: #DE98E6;
+        margin-top: -6px;
+        margin-bottom: 15px;
+      }
+      
+      .wrapper-slides{
+        margin: auto;
+        background-color: #2c2c35;
       }
       
       .title{
@@ -116,17 +142,21 @@
         padding-left: 155px;
         color: #77306A;
       }
-      
-      * {box-sizing: border-box}
 
       /* Slideshow container */
+      /* 
+        Below is code copied from: https://www.youtube.com/watch?v=1CZhGDU5cWM&t=421s&ab_channel=AnnaBlok%E2%80%94FrontendTutorial
+        Author: Anna Bloc Frontend Tutorial
+        Name: Responsive Slider Using HTML & CSS Only
+        Description: Video walks through steps to create an image slider with progress dots and side nav arrows.
+        Date retrieved: March 15th 2025
+      */
       .slideshow-container {
         width: 1000px;
         position: relative;
         margin: auto;
       }
 
-      /* Hide the images by default */
       .mySlides {
         display: none;
       }
@@ -135,7 +165,6 @@
         width: 100%;
       }
 
-      /* Next & previous buttons */
       .prev, .next {
         cursor: pointer;
         position: absolute;
@@ -151,18 +180,15 @@
         user-select: none;
       }
 
-      /* Position the "next button" to the right */
       .next {
         right: 0;
         border-radius: 3px 0 0 3px;
       }
 
-      /* On hover, add a black background color with a little bit see-through */
       .prev:hover, .next:hover {
         background-color: #16161b;
       }
 
-      /* The dots/bullets/indicators */
       .dot {
         cursor: pointer;
         height: 15px;
@@ -178,7 +204,6 @@
         background-color: #DE98E6;
       }
 
-      /* Fading animation */
       .fade {
         animation-name: fade;
         animation-duration: 1.5s;
@@ -187,30 +212,6 @@
       @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
-      }
-      
-      body{
-        background-color: #FAF0E7;
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Gelasio", serif;
-        color: #2C2C35;
-      }
-      
-      p{
-        margin: 0px 25px 30px 25px;
-      }
-      
-      #last-img{
-        margin-right: 25px;
-      }
-      
-      .divider{
-        height: 20px;
-        background-color: #DE98E6;
-        margin-top: -6px;
-        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -225,29 +226,31 @@
       </ul>
     </div>
     <div class="wrapper-slides">
-      <!-- Slideshow container -->
       <div class="slideshow-container">
-        <!-- Full-width images -->
         <div class="mySlides fade">
           <img src="magz-p-1.png" alt="Where's The Inpos? An original collection of random designs from everyday life. Picture of a black and white woman touching her face with a cigarette in her mouth. Castle worn on her head like a crown. Part of her face is divided into small triangles filled with varying textures and patterns coloured bright yellow and saturated purples and pinks.">
         </div>
-
         <div class="mySlides fade">
           <img src="mag-p-2.png" alt="The Type Face: a screaming face made from various letters showcasing differences in fonts and colours. Bold red screaming bubble projecting from the face's mouth.">
         </div>
-
         <div class="mySlides fade">
           <img src="mag-p-3.png" alt="A collage of images showing a woman sitting at a table carelessly pouring her tea. The liquid splashes all over her while she looks, bored, toward the viewer. Also, two cartoon images of a snake eating an elephant. In one we see a skeleton view and the other the brown exterior of the snake.">
         </div>
-
         <div class="mySlides fade">
           <img src="mag-p-4.png" alt="A collage of images showing a young woman, cigarette in mouth, wearing boxing gloves made of strawberries and a horse head worn as a hat. Two tigers circle each other in front of her.">
         </div>
-
         <div class="mySlides fade">
           <img src="magz-p-5.png" alt="An unimpressed woman looks at the viewer with a can of Pepsi in her hand. Around her leg is a F1 raceway where a sports car is passing.">
         </div>
 
+        <!-- 
+          Below is code copied from: https://www.youtube.com/watch?v=1CZhGDU5cWM&t=421s&ab_channel=AnnaBlok%E2%80%94FrontendTutorial
+          Author: Anna Bloc Frontend Tutorial
+          Name: Responsive Slider Using HTML & CSS Only
+          Description: Video walks through steps to create an image slider with progress dots and side nav arrows.
+          Date retrieved: March 15th 2025
+        -->
+        
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -267,12 +270,10 @@
         let slideIndex = 1;
         showSlides(slideIndex);
 
-        // Next/previous controls
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
